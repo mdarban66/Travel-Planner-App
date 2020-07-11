@@ -1,0 +1,115 @@
+#app {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: repetat(4, 1fr);
+    grid-template-areas: "hd hd hd hd" "img img img img" "cn cn cn cn" "det det det det" "ft ft ft ft";
+    background-size: contain;
+    /* color: #58393c; */
+    justify-content: center;
+    // grid-gap: 5px;
+    font-size: 16px;
+    font-family: 'Times New Roman', sans-serif, 'Oswald';
+    color: black;
+}
+
+#headline {
+    grid-area: hd;
+    background-image: url('../images/travel2.jpg');
+    background-size: cover;
+    opacity: 0.90;
+    text-align: center;
+    color: rgb(194, 3, 3);
+    font-size: 35px;
+    -webkit-text-stroke: 0.8px rgb(7, 7, 7);
+    text-shadow: 5px 10px 12px #000000; //, 0 0 5px #777770;
+}
+
+#addTrip {
+    display: none;
+}
+
+.destImage {
+    background-image: url('https://pixabay.com/get/50e3d4444253b10ff3d8992cc62f337f163ed7e44e507440712b7fd29348c0_640.jpg');
+    background-size: cover;
+    // border: 1px solid black;
+    // background-size: cover;
+    grid-area: img;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5%;
+    width: 400px;
+    height: 200px;
+    // margin: 5px;
+    border: solid 1px rgb(90, 89, 89);
+    box-shadow: 10px 10px 5px rgb(180, 179, 179);
+}
+
+.tripInfo {
+    grid-area: cn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    /* padding: 40px;
+    justify-content: space-between; */
+    /* padding: 40px;
+    // padding-left: 50px;
+    // padding-right: auto;
+    /* justify-content: space-between; */
+}
+
+#navMenu {
+    grid-area: det;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcf0e7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // margin: 5px;
+    // padding: 5px;
+    // padding-left: 150px;
+    // padding-right: auto;
+    // background-image: url(../images/note2.jpg);
+}
+
+#summary {
+    grid-area: ft;
+    text-align: center;
+    border: 1px solid rgb(68, 67, 67);
+    background-color: rgb(202, 189, 177);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.menu {
+    display: none;
+}
+
+#content {
+    background-color: #fcf0e7;
+}
+
+.box {
+    /* border: 1px solid rgb(68, 67, 67); */
+    margin: 5px;
+    width: 90vw;
+    padding: 10px;
+    font-size: 17px;
+}
+
+label {
+    font-size: 16px;
+}
+
+tr,
+td {
+    font-size: 18px;
+}
+
+#tripInfoTbl {
+    display: block;
+}

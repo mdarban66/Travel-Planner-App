@@ -1,4 +1,6 @@
+var path = require('path')
 const express = require('express');
+// const mockAPIResponse = require('./mockAPI.js')
 const app = express();
 
 const cors = require('cors');
@@ -8,7 +10,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static('projects/weather-journal-app/website'));
+app.use(express.static('dist'));
+// console.log(JSON.stringify(mockAPIResponse))
 
 const port = 8000;
 app.listen(port, listening);
@@ -47,3 +50,24 @@ function updateData(req, res) {
     console.log(`updated data at server side is: ${projectData}`);
     res.send(projectData);
 }
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+// Setup empty JS object to act as endpoint for all routes
+// projectData = {};
+
+// // Require Express to run server and routes
+
+// // Start up an instance of app
+
+// /* Middleware*/
+// //Here we are configuring express to use body-parser as middle-ware.
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+
+// // Cors for cross origin allowance
+
+// // Initialize the main project folder
+// app.use(express.static('website'));
+
+
+// Setup Server

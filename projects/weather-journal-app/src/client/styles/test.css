@@ -1,0 +1,65 @@
+#app {
+    display: grid;
+    border: 1px solid orange;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: repetat(4, 1fr);
+    grid-template-areas: "hd hd hd hd" "cn cn cn cn";
+    background: #f3d6dc;
+    color: #58393c;
+    justify-content: center;
+    /* grid-gap: 0.5em; */
+    font-size: 30px;
+    font-family: 'Times New Roman', sans-serif, 'Oswald';
+    color: black;
+}
+
+.box {
+    border: 1px solid rgb(250, 150, 167);
+    width: 100vw;
+    padding: 10px;
+    font-size: 17px;
+}
+
+#headline {
+    grid-area: hd;
+    /* font-size: 1.2em; */
+}
+
+#content {
+    /* grid-area: cn; */
+    /* padding-left: 30px;
+    padding-right: auto; */
+    grid-area: cn;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px;
+    justify-content: space-between; */
+    border: 1px dashed rgb(223, 39, 39);
+}
+
+.destImage {
+    /* grid-area: img; */
+    border: 1px dashed white;
+}
+
+.tripInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px;
+    justify-content: space-between; */
+    border: 1px dashed rgb(39, 223, 85);
+}
+
+.info {
+    border: 1px solid black;
+    /* grid-area: cn; */
+}
+
+.saveRemoveBtns {
+    border: 1px solid black;
+    /* grid-area: pm; */
+}

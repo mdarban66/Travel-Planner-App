@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Planner</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <!-- <link type="css" rel="stylesheet" href="src/node_modules/bootstrap/dist/css/bootstrap.css" crossorigin="anonymous"> -->
+
+    <!-- <base href="/"> -->
+
+    <link href="../styles/styles.scss" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="box" id="headline">
+            <h1 id="element">Travel Planner</h1>
+        </div>
+        <div class="box" id="addTrip">
+
+            <h3 id="element">My Trips:</h3>
+            <div class="btnBox" id="element">
+                <button id="addTripBtn" type="submit"><a href="#summary" id="addLink">add trip</a></button>
+            </div>
+
+        </div>
+        <div class="box" id="content">
+            <!-- <div class="destImage" id="element"></div> -->
+            <div class="img" id="element">
+                <img class="destImage" src="https://pixabay.com/get/54e6d4444f50a814f1dc84609629307a143cdfec524c704c7c2b78d1924cc459_640.jpg">
+
+            </div>
+            <div class="tripInfo box" id="element">
+
+                <!-- <div class="tripTo"> -->
+                <table id="tripInfoTbl">
+                    <tr>
+                        <td>
+                            <p class="title"><strong>My trip Information: </strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>City: </strong></p>
+                        </td>
+
+                        <td>
+                            <p id="city"></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>Country: </strong></p>
+                        </td>
+                        <td>
+                            <p id="country"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>Departing: </strong></p>
+                        </td>
+                        <td>
+                            <p id="departing"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>Returning: </strong></p>
+                        </td>
+                        <td>
+                            <p id="returning"></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p><strong># of Bags: </strong></p>
+                        </td>
+                        <td>
+                            <p id="luggage">---</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>Notes: </strong></p>
+                        </td>
+                        <td>
+                            <p id="notes">---</p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="saveRemoveBtns">
+                    <button class="printBtn">Print</button>
+                </div>
+
+
+
+                <!-- <p><strong>My trip to: </strong></p>
+                <p id="tripTo">Amsterdam</p>
+             
+                <p><strong>Departing: </strong></p>
+                <p id="departing">blah blah blah blah blah blah..............................</p>
+              
+                <p><strong>Number of Luggages: </strong></p>
+                <p id="luggage">3</p>
+               
+                <p><strong>Notes: </strong></p>
+                <p id="notes"></p>
+                -->
+
+                <!-- <p class="info">
+                    <strong>My trip to: </strong>blah blah blah blah blah blah.........................................................
+                    <br/>
+                    <strong>Departing: </strong>blah blah blah blah blah blah..............................
+                </p>
+                <div class="saveRemoveBtns">
+                    <button class="saveTripBtn" type="submit">save</button>
+                    <button class="removeTripBtn" type="submit">remove</button>
+                </div> -->
+
+            </div>
+
+        </div>
+        <div class="box" id="navMenu">
+
+            <nav class="menu">
+                <ul class="menuList" id="element">
+                    <li>
+                        <a href="#headline">Home</a>
+                    </li>
+                    <!-- <li>
+                        <a href="">About</a>
+                    </li> -->
+                    <li>
+                        <a href="javascript:document.querySelector('#summary').scrollIntoView({ behavior: 'smooth' });">Add Trip</a>
+                    </li>
+                    <li>
+                        <a id='bags' href="javascript:document.querySelector('#content').scrollIntoView({ behavior: 'smooth' });">Add Luggage</a>
+                    </li>
+                    <li>
+                        <a id="noteBtn" href="javascript:document.querySelector('#content').scrollIntoView({ behavior: 'smooth' });">Add Notes</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="details">
+                <!-- <p id="element">-------------Astala vista------------</p> -->
+                <div class="holder">
+                    <div class="title"><strong>Recent Entry</strong></div>
+                    </br>
+                    <div id="entryHolder">
+                        <!-- <label for="dest">Destination: </label>
+                        <div id="dest"></div> -->
+                        <!-- <label for="country">Country: </label>
+                        <div id="country"></div>
+                        <label for="date">Date: </label>
+                        <div id="date"></div> -->
+
+                        <label for="temp"><strong>Current Temperature: </strong></label>
+                        <div id="temp" class='tripDetDiv'></div>
+                        <label for="futureTemp"><strong>Arrival Temperature: </strong></label>
+                        <div id="futureTemp" class='tripDetDiv'></div>
+                        <label for="dayss"><strong>Days to Trip: </strong></label>
+                        <div id="dayss" class='tripDetDiv'></div>
+                        <label for="length"><strong>Trip Length: </strong></label>
+                        <div id="length" class='tripDetDiv'></div>
+                        <label for="sDetails"><strong>Arrival Weather Details: </strong></label>
+                        <div id="sDetails" class='tripDetDiv'></div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="box" id="summary">
+            <h3>My Trip Plan:</h3>
+            <table class="inputData">
+                <tr>
+                    <td>
+                        <h4>My trip to: </h4>
+                    </td>
+                    <td><input id="tripInput" type="text" name="destination" value="Enter Zipcode/City" onfocus="this.value=''"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Departing: </h4>
+                    </td>
+                    <td><input id="departingInput" type="date" name="date" placeholder="mm/dd/yyyy" value="" min="2020-07-10" max="2021-07-10"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Returning: </h4>
+                    </td>
+                    <td><input id="returningInput" type="date" name="date" placeholder="mm/dd/yyyy" value="" min="2020-07-10" max="2021-07-10"></td>
+                </tr>
+
+            </table>
+
+            <div class="saveRemoveBtns">
+                <button id="submitTripBtn" type="submit" class="submitReset">Submit</button>
+                <!-- <button id="saveTripBtn" type="submit" onclick="Client.clicked(event)" onsubmit="Client.clicked(event)">save</button> -->
+                <button id="resetTripBtn" type="submit" class="submitReset">Reset</button>
+            </div>
+            </br>
+            </br>
+        </div>
+
+        <!-- <div class="holder zip">
+            <label for="zip">Enter Zipcode here</label>
+            <input type="text" id="zip" placeholder="enter zip code here">
+        </div>
+        <div class="holder feel">
+            <label for="feelings">How are you feeling today?</label>
+            <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
+            <button id="generate" type="submit"> Generate </button>
+        </div>
+        <div class="holder entry">
+            <div class="title">Most Recent Entry</div>
+            <div id="entryHolder">
+                <label for="date">Date: </label>
+                <div id="date"></div>
+                <label for="temp">Temperature: </label>
+                <div id="temp"></div>
+                <label for="content">User Response: </label>
+                <div id="content"></div>
+            </div>
+        </div> -->
+    </div>
+    <!-- <script src="app.js" type="text/javascript"></script> -->
+    <script>
+        // window.addEventListener('load', () => {
+        //     console.log("page's loaded successfully");
+
+        //     document.getElementById('submitTripBtn').addEventListener('click', function() {
+        //         // console.log('clickeddddd');
+        //         Client.clicked(event)
+        //     });
+        //     document.getElementById('resetTripBtn').addEventListener('click', function() {
+        //         // console.log('clickeddddd');
+        //         Client.clicked(event)
+        //     })
+        // })
+
+
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>
