@@ -4,9 +4,7 @@
     grid-template-columns: repetat(4, 1fr);
     grid-template-areas: "hd hd hd hd" "img img img img" "cn cn cn cn" "det det det det" "ft ft ft ft";
     background-size: contain;
-    /* color: #58393c; */
     justify-content: center;
-    // grid-gap: 5px;
     font-size: 16px;
     font-family: 'Times New Roman', sans-serif, 'Oswald';
     color: black;
@@ -29,10 +27,7 @@
 }
 
 .destImage {
-    background-image: url('https://pixabay.com/get/50e3d4444253b10ff3d8992cc62f337f163ed7e44e507440712b7fd29348c0_640.jpg');
-    background-size: cover;
-    // border: 1px solid black;
-    // background-size: cover;
+    // content: url("../images/travel11.jpg");
     grid-area: img;
     margin-left: auto;
     margin-right: auto;
@@ -40,7 +35,6 @@
     border-radius: 5%;
     width: 400px;
     height: 200px;
-    // margin: 5px;
     border: solid 1px rgb(90, 89, 89);
     box-shadow: 10px 10px 5px rgb(180, 179, 179);
 }
@@ -52,12 +46,6 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 20px;
-    /* padding: 40px;
-    justify-content: space-between; */
-    /* padding: 40px;
-    // padding-left: 50px;
-    // padding-right: auto;
-    /* justify-content: space-between; */
 }
 
 #navMenu {
@@ -69,11 +57,6 @@
     background-color: #fcf0e7;
     padding-top: 40px;
     padding-bottom: 40px;
-    // margin: 5px;
-    // padding: 5px;
-    // padding-left: 150px;
-    // padding-right: auto;
-    // background-image: url(../images/note2.jpg);
 }
 
 #summary {

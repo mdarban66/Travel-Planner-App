@@ -8,9 +8,10 @@ Travel Planner is an asynchronous web app that employs Web API and data entered 
 The Travel Planner app can be run by following these steps:
 1. Redirect to the root of the project's folder
 2. npm install
-3. npm run build-dev
-4. npm start (using another terminal)
-5. Enter the zip-code/city-name of the target place and departure and return date; then press Submit button to see the results.
+3. npm run build-prod
+4. npm start 
+5. In your default browser, enter "http://localhost:8080/" in the address bar
+6. Enter the zip-code or city-name of the target place, along with departure and return dates; then click on the Submit button to see the results.
    
 ## How to Test
 The Travel Planner app can be tested for the provided test cases by the following steps:

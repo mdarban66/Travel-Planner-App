@@ -1,13 +1,14 @@
 import './styles/styles.scss'
 
-import './images/3.png'
+import './images/travel11.jpg'
+import './images/travel2.jpg'
 
 import { getCityDetails } from './js/geoApi'
 import { updateUI } from './js/update'
 import { postData } from './js/post'
 import { getWeather } from './js/weatherApi'
 import { getData } from './js/getData'
-// import { testDateDiff } from './js/testDate'
+
 
 
 
@@ -42,7 +43,7 @@ window.addEventListener('load', () => {
 
 
         console.log('depating date vallue: ' + departingInput.value + 'returning date value: ' + returningInput.value);
-        // console.log(departingInput.value < returningInput.value);
+
         let tem = '';
         try {
             tem = testDateDiff(departingInput.value, returningInput.value);
@@ -51,9 +52,7 @@ window.addEventListener('load', () => {
         }
 
         console.log('+++++++++++++++++++++++' + tem);
-        // if (!tem) {
 
-        // }
 
         const timestamp = (new Date(departingInput.value).getTime());
         const returnTimestamp = (new Date(returningInput.value).getTime());
@@ -65,7 +64,7 @@ window.addEventListener('load', () => {
         }
 
         console.log(document.querySelector('input[name="destination"]').value);
-        // getData('http://localhost:8082/retrieve');
+
         const response = Client.getCityDetails(geoUrl, tripInput.value, geonames_username)
             .then(function(data_geo) {
                 console.log(response);
@@ -96,29 +95,28 @@ window.addEventListener('load', () => {
                     const imageLink = await res.json();
                     const imgUrl = "url('" + imageLink.hits[0].webformatURL + "')";
                     document.querySelector(".destImage").setAttribute('src', imageLink.hits[0].webformatURL);
+
                 } catch (error) {
                     console.log('error', error);
                 }
             })
-            // .then(function(postResult) {
-            //     updateUI(postResult);
-            // })
+
 
     });
 
 
     resetBtn.addEventListener('click', function() {
-        // console.log('clickeddddd');
-        tripInput.value = "Please Enter Location";
+
+        tripInput.value = "Enter Zipcode/City";
         departingInput.value = "mm/dd/yyyy";
         returningInput.value = "mm/dd/yyyy";
         localStorage.clear();
-        // location.reload();
+
     })
     printBtn.addEventListener('click', function() {
-        // console.log('clickeddddd');
+
         window.print();
-        // location.reload();
+
     });
     const addTripEvList = addBtn.addEventListener('click', function(event) {
         event.preventDefault();

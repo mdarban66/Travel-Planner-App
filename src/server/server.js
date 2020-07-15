@@ -1,6 +1,6 @@
 var path = require('path')
 const express = require('express');
-// const mockAPIResponse = require('./mockAPI.js')
+
 const app = express();
 
 const cors = require('cors');
@@ -10,8 +10,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 app.use(express.static('dist'));
-// console.log(JSON.stringify(mockAPIResponse))
+
 
 const port = 8080;
 app.listen(port, listening);
@@ -22,10 +23,10 @@ const weatherObj = {};
 const projectData = [];
 
 app.get('/', function(req, res) {
-        res.sendfile('index.html');
-        // res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
-    })
-    // app.get('/retrieve', getData);
+    res.sendfile('index.html');
+    // res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
+})
+
 app.post('/add', postData);
 app.get('/all', updateUI)
 
